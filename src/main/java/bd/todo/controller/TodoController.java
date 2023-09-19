@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import bd.todo.model.Todo;
 import bd.todo.service.TodoService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = { "http://localhost:3000", "https://main--amazing-cajeta-f366f2.netlify.app" })
 @RestController
 @RequestMapping("/api/v1/")
 public class TodoController {
