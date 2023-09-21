@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import bd.todo.model.User;
 import bd.todo.service.UserService;
 
-@CrossOrigin(origins = { "http://localhost:3000", "https://main--amazing-cajeta-f366f2.netlify.app" })
+@CrossOrigin(origins = { "http://localhost:3000", "https://amazing-cajeta-f366f2.netlify.app" })
 @RestController
 @RequestMapping("/api/v1/")
 public class UserController {
