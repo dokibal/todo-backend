@@ -33,11 +33,12 @@ public class Todo {
 	public Todo() {
 	}
 
-	public Todo(String activity, boolean done, User user) {
+	public Todo(String activity, boolean done, User user, LocalDateTime creationDate) {
 		super();
 		this.activity = activity;
 		this.done = done;
 		this.user = user;
+		this.creationDate = creationDate;
 	}
 
 	public long getId() {

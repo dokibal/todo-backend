@@ -29,6 +29,11 @@ public class TodoController {
 		this.todoService = todoService;
 	}
 
+	@GetMapping("wakeup")
+	public ResponseEntity<Boolean> wakeUp() {
+		return ResponseEntity.ok(true);
+	}
+
 	@GetMapping("/todos/{userId}")
 	public ResponseEntity<List<Todo>> getTodos(@PathVariable Long userId) {
 		return ResponseEntity.ok(todoService.getTodos(userId));

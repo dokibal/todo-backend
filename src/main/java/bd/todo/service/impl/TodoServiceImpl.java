@@ -1,7 +1,5 @@
 package bd.todo.service.impl;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -40,9 +38,6 @@ public class TodoServiceImpl implements TodoService {
 
 	@Override
 	public Todo addTodo(Todo todo) {
-		ZoneId localZoneId = ZoneId.systemDefault();
-		LocalDateTime date = LocalDateTime.now(localZoneId);
-		todo.setCreationDate(date);
 		return todoRepository.save(todo);
 	}
 
