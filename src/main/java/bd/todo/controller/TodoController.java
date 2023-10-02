@@ -17,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import bd.todo.model.Todo;
 import bd.todo.service.TodoService;
 
-@CrossOrigin(origins = { "http://localhost:3000", "https://amazing-cajeta-f366f2.netlify.app" })
+@CrossOrigin(origins = { "http://localhost:3000", "https://amazing-cajeta-f366f2.netlify.app",
+		"https://doktorbalazs.hu" })
 @RestController
 @RequestMapping("/api/v1/")
 public class TodoController {
@@ -29,7 +30,7 @@ public class TodoController {
 		this.todoService = todoService;
 	}
 
-	@GetMapping("wakeup")
+	@GetMapping("/wakeup")
 	public ResponseEntity<Boolean> wakeUp() {
 		return ResponseEntity.ok(true);
 	}
